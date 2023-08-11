@@ -4,9 +4,9 @@ export const StyledHeader = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: fit-content;
   color: var(--color-grey-0);
   font-weight: 600;
+  height: auto;
 
   .header_up {
     display: flex;
@@ -58,6 +58,7 @@ export const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     height: max-content;
+    padding: 0.5rem 2.5rem;
   }
 
   #header_logo_anchor {
@@ -65,7 +66,7 @@ export const StyledHeader = styled.header`
   }
 
   #header_logo {
-    height: 4rem;
+    height: 3rem;
   }
 
   .header_nav_button {
@@ -96,8 +97,9 @@ export const StyledHeader = styled.header`
   @media (min-width: 1023px) {
     .header_up {
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-evenly;
       align-items: center;
+      padding: 1rem;
     }
     .header_up_right_contacts {
       flex-direction: row;
@@ -120,13 +122,16 @@ export const StyledHeader = styled.header`
       justify-content: center;
     }
 
-    .header_nav_item:hover {
-      background-color: var(--color-tertiary-0);
-    }
-
     .header_nav_button {
       background-color: transparent;
       border: none;
+      font-weight: 600;
+      color: var(--color-grey-1);
+      padding: 0.25rem;
+    }
+
+    .header_nav_button:hover {
+      color: var(--color-grey-3);
     }
 
     button {
