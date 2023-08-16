@@ -58,15 +58,21 @@ export const StyledHeader = styled.header`
     display: flex;
     justify-content: space-between;
     height: max-content;
-    padding: 0.5rem 2.5rem;
+    padding: 0.5rem;
   }
 
-  #header_logo_anchor {
-    height: 3rem;
+  .header_down_left_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   #header_logo {
     height: 3rem;
+  }
+
+  #header_logo_anchor {
+    display: flex;
   }
 
   .header_nav_button {
@@ -89,9 +95,12 @@ export const StyledHeader = styled.header`
   }
 
   .menu_button {
-    width: 58px;
-    height: 58px;
+    width: 55px;
+    height: 55px;
     font-size: 30px;
+    color: var(--color-grey-1);
+    border: 0.25px solid var(--color-grey-1);
+    border-radius: 5%;
   }
 
   @media (min-width: 1023px) {
@@ -105,6 +114,10 @@ export const StyledHeader = styled.header`
       flex-direction: row;
       justify-content: center;
       gap: 2.5rem;
+    }
+
+    #header_logo {
+      margin-left: 1rem;
     }
 
     #header_nav_list {
@@ -128,6 +141,7 @@ export const StyledHeader = styled.header`
       font-weight: 600;
       color: var(--color-grey-1);
       padding: 0.25rem;
+      font-size: var(--font-size-7);
     }
 
     .header_nav_button:hover {

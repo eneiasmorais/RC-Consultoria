@@ -22,19 +22,22 @@ export const GlobalStyles = createGlobalStyle`
     --radius-default: 5px;
     --shadow: 0 4px 4px 0 #00000040;
 
-    --font-size-1: 30px;
-    --font-size-2: 26px;
-    --font-size-3: 22px;
-    --font-size-4: 20px;
-    --font-size-5: 18px;
-    --font-size-6: 16px;
-    --font-size-7: 14px;
-    --font-size-8: 12px;
-    --font-size-9: 10px;
+    --font-size-0: 4.5rem;
+    --font-size-1: 3.5rem;
+    --font-size-2: 3rem;
+    --font-size-3: 2.5rem;
+    --font-size-4: 2rem;
+    --font-size-5: 1.5rem;
+    --font-size-6: 1.25rem;
+    --font-size-7: 1rem;
+    --font-size-8: 0.75rem;
+    --font-size-9: 0.5rem;
+    --font-size-10: 0.25rem;
 }
 
 body{
     font-family: "Montserrat", sans-serif;
+    overflow-x: hidden ;
 }
 
 `;

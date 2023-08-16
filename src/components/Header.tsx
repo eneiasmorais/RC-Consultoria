@@ -32,7 +32,7 @@ export const Header = () => {
           <div id="header_contacts_adress">
             <i className="fa-solid fa-location-pin"></i>
             <p id="header_p_adress">
-              R. Jaír Martins Mil Homens, 398 | São José do Rio Preto - SP
+              R. Jaír Martins Mil Homens, 398 | S. J. Rio Preto - SP
             </p>
           </div>
         </div>
