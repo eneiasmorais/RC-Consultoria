@@ -3,6 +3,7 @@ import { StyledReset } from "./Reset";
 import { StyledNotFoundDiv } from "./StyledNotFoundPage";
 import { StyledHeader } from "./StyledHeader";
 import { StyledBanners } from "./StyledBanners";
+import { StyledDifferentials } from "./StyledDifferentials";
 
 export default {
   GlobalStyles,
@@ -10,4 +11,5 @@ export default {
   StyledReset,
   StyledHeader,
   StyledBanners,
+  StyledDifferentials,
 };
