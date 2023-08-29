@@ -19,7 +19,7 @@ export const StyledWhoAreWe = styled.section`
     gap: 3rem;
     color: var(--color-grey-1);
     padding: 1rem;
-    margin: 1.5rem 3rem;
+    margin: 1.5rem 2rem;
   }
 
   .content_articles_item {
@@ -45,7 +45,7 @@ export const StyledWhoAreWe = styled.section`
     article {
       flex-direction: row;
       align-items: end;
-      gap: 3rem;
+      gap: 2rem;
     }
     .title_articles {
       font-size: var(--font-size-2);
@@ -55,12 +55,13 @@ export const StyledWhoAreWe = styled.section`
     .content_articles_container {
       width: 50%;
       text-align: justify;
-      /* gap: 2rem;
-    color: var(--color-grey-1); */
+      gap: 2rem;
+      /* color: var(--color-grey-1); */
     }
 
     .business_div_img {
       width: 50%;
+      margin-bottom: 3rem;
     }
 
     .business_img {

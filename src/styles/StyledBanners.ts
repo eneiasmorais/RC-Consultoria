@@ -71,7 +71,7 @@ export const StyledBanners = styled.section<{ activeImageIndex: number }>`
   }
 
   .banner_title2_high {
-    font-size: var(--font-size-3);
+    font-size: var(--font-size-4);
     font-weight: 800;
   }
 
@@ -104,11 +104,6 @@ export const StyledBanners = styled.section<{ activeImageIndex: number }>`
     border: 2px solid var(--color-grey-0);
   }
 
-  /* .button_alt {
-    border-color: var(--color-primary);
-    color: var(--color-primary);
-  } */
-
   @media (min-width: 1023px) {
     .banner_button_01,
     .banner_button_02 {
@@ -130,7 +125,7 @@ export const StyledBanners = styled.section<{ activeImageIndex: number }>`
     }
 
     .banner_title2_high {
-      font-size: var(--font-size-0);
+      font-size: var(--font-size-1);
     }
 
     .banner_title3_small {
