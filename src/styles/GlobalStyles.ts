@@ -11,6 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     --option-1: #D4AF37;
     --option-2: #CFB53B;
     --option-3: #C5B358;
+    --orange-0: #fFB444; //acho que este é o correto!
 
     
     --color-grey-0: #dee2e6;

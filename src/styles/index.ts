@@ -4,6 +4,7 @@ import { StyledNotFoundDiv } from "./StyledNotFoundPage";
 import { StyledHeader } from "./StyledHeader";
 import { StyledBanners } from "./StyledBanners";
 import { StyledDifferentials } from "./StyledDifferentials";
+import { StyledOurServices } from "./StyledOurServices";
 
 export default {
   GlobalStyles,
@@ -12,4 +13,5 @@ export default {
   StyledHeader,
   StyledBanners,
   StyledDifferentials,
+  StyledOurServices,
 };

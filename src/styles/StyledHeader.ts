@@ -59,6 +59,7 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
     height: max-content;
     padding: 0.5rem;
+    background-color: white;
   }
 
   .header_down_left_logo {

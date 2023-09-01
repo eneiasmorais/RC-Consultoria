@@ -7,7 +7,7 @@ export const StyledDifferentials = styled.section`
   align-items: center;
 
   .business_img {
-    width: 100%;
+    width: 100vw;
   }
 
   .image_container {
