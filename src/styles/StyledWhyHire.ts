@@ -57,7 +57,7 @@ export const StyledWhyHire = styled.section`
   }
 
   @media (min-width: 1023px) {
-    margin: 3rem 6rem;
+    margin: 6rem;
 
     .div_title_articles {
       font-size: var(--font-size-1);
@@ -70,11 +70,14 @@ export const StyledWhyHire = styled.section`
     .whyList {
       flex-wrap: wrap;
       font-size: var(--font-size-6);
-      height: 100vh;
+      height: 200vh;
+      justify-content: flex-start;
+      width: 100%;
     }
 
     .whyList_item {
       width: 50%;
+      padding: 0 3rem;
     }
   }
 `;

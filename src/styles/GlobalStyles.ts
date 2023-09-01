@@ -5,13 +5,15 @@ export const GlobalStyles = createGlobalStyle`
 :root{
     --color-primary: #000060;
     --color-primary-1: #191970;
+    --color-primary-2: #170b2a; //achei essa mais parecida
+    --color-primary-3: #1f104f; //tem essa tbm
     --color-secondary: #972b12;
     --color-tertiary-0: #d6a60d;
     --color-tertiary-1: #dfb01c;
     --option-1: #D4AF37;
     --option-2: #CFB53B;
     --option-3: #C5B358;
-    --orange-0: #fFB444; //acho que este é o correto!
+    --orange-0: #ED9121; //acho que este é o correto! acho quew não deu certo para as
 
     
     --color-grey-0: #dee2e6;

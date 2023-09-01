@@ -6,6 +6,7 @@ import { OurServices } from "../components/OurServices";
 import { Expertises } from "../components/Expertises";
 import { StyledHomePage } from "../styles/StyledHomePage";
 import { WhyHire } from "../components/WhyHire";
+import { PhasesWork } from "../components/PhasesWork";
 
 export const HomePage = () => {
   return (
@@ -18,6 +19,7 @@ export const HomePage = () => {
         <OurServices />
         <Expertises />
         <WhyHire />
+        <PhasesWork />
       </main>
     </StyledHomePage>
   );
