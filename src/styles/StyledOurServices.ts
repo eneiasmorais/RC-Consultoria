@@ -5,6 +5,7 @@ export const StyledOurServices = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 3rem 6rem;
 
   .title_articles {
     font-size: var(--font-size-3);
@@ -22,7 +23,6 @@ export const StyledOurServices = styled.section`
     width: 100%;
   }
   @media (min-width: 1023px) {
-    margin: 3rem 6rem;
     .title_articles {
       font-size: var(--font-size-2);
     }

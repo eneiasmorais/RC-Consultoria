@@ -48,9 +48,7 @@ export const Banners = () => {
             }`}
           >
             <div className="banner_texts banner_texts_01">
-              <h3 className="banner_title1_medium">
-                Somos contadores especializados em
-              </h3>
+              <h3 className="banner_title1_medium">Somos especializados em</h3>
               <div className="banner_title2_high_container_01">
                 <h2 className="banner_title2_high">Gestão tributária</h2>
                 <h2 className="banner_title2_high">inteligente</h2>

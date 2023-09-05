@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { StyledHeader } from "../styles/StyledHeader";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
   const [showNavList, setShowNavList] = useState(true);
@@ -23,32 +24,40 @@ export const Header = () => {
         <div className="header_up_right_contacts">
           <div id="header_contacts_phone">
             <i className="fa-solid fa-phone"></i>
-            <p id="header_p_phone">(17) 98170-6767</p>
+            <p id="header_p_phone">(17) 99171-7370</p>
           </div>
           <div id="header_contacts_email">
             <i className="fa-solid fa-envelope"></i>
-            <p id="header_p_email">carolineuchoa_tributario@outlook.com</p>
+            <p id="header_p_email">contato@rcconsultoriatributaria.com.br</p>
           </div>
           <div id="header_contacts_adress">
             <i className="fa-solid fa-location-pin"></i>
             <p id="header_p_adress">
-              R. Jaír Martins Mil Homens, 398 | S. J. Rio Preto - SP
+              Av. Anísio Haddad, 6.900 | Sala 01 | S. J. Rio Preto - SP
             </p>
           </div>
         </div>
         <div className="header_up_left_socialNetworks">
-          <button id="instagram_icon">
-            <i className="fa-brands fa-instagram"></i>
-          </button>
-          <button id="facebook_icon">
-            <i className="fa-brands fa-facebook"></i>
-          </button>
-          <button id="linkedIn_icon">
-            <i className="fa-brands fa-linkedin"></i>
-          </button>
-          <button id="youTube_icon">
-            <i className="fa-brands fa-youtube"></i>
-          </button>
+          <Link to="https://www.instagram.com/rc_consultoriatributaria/">
+            <button id="instagram_icon">
+              <i className="fa-brands fa-instagram"></i>
+            </button>
+          </Link>
+          <Link to="">
+            <button id="facebook_icon">
+              <i className="fa-brands fa-facebook"></i>
+            </button>
+          </Link>
+          <Link to="https://www.linkedin.com/in/rc-consultoria-tributaria-26b59628b/">
+            <button id="linkedIn_icon">
+              <i className="fa-brands fa-linkedin"></i>
+            </button>
+          </Link>
+          <Link to="">
+            <button id="youTube_icon">
+              <i className="fa-brands fa-youtube"></i>
+            </button>
+          </Link>
         </div>
       </div>
       <div className="header_down">

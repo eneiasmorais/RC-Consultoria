@@ -34,12 +34,14 @@ export const StyledPhasesWork = styled.section`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    background-color: var(--orange-0);
+    background-color: #a0a0a0;
     min-height: 200px;
     width: 20rem;
     height: max-content;
     margin: 1rem;
     border-radius: 40px;
+    color: var(--color-grey-2);
+    color: var(--color-grey-2);
   }
 
   .title_item {

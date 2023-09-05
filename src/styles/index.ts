@@ -5,6 +5,8 @@ import { StyledHeader } from "./StyledHeader";
 import { StyledBanners } from "./StyledBanners";
 import { StyledDifferentials } from "./StyledDifferentials";
 import { StyledOurServices } from "./StyledOurServices";
+import { StyledExpertises } from "./StyledExpertises";
+import { StyledContacts } from "./StyledContacts";
 
 export default {
   GlobalStyles,
@@ -14,4 +16,6 @@ export default {
   StyledBanners,
   StyledDifferentials,
   StyledOurServices,
+  StyledExpertises,
+  StyledContacts,
 };

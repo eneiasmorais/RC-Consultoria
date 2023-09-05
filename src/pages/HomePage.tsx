@@ -7,6 +7,7 @@ import { Expertises } from "../components/Expertises";
 import { StyledHomePage } from "../styles/StyledHomePage";
 import { WhyHire } from "../components/WhyHire";
 import { PhasesWork } from "../components/PhasesWork";
+import { Contacts } from "../components/Contacts";
 
 export const HomePage = () => {
   return (
@@ -20,6 +21,7 @@ export const HomePage = () => {
         <Expertises />
         <WhyHire />
         <PhasesWork />
+        <Contacts />
       </main>
     </StyledHomePage>
   );

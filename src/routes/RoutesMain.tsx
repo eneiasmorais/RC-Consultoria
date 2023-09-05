@@ -5,7 +5,7 @@ import { NotFoundPage } from "../pages/NotFoundPage";
 export const RoutesMain = () => {
   return (
     <Routes>
-      <Route path="/home" element={<HomePage />} />
+      <Route path="/" element={<HomePage />} />
       <Route path="*" element={<NotFoundPage />} />
     </Routes>
   );

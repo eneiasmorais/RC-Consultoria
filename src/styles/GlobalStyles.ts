@@ -3,10 +3,7 @@ import { createGlobalStyle } from "styled-components";
 export const GlobalStyles = createGlobalStyle`
 
 :root{
-    --color-primary: #000060;
-    --color-primary-1: #191970;
-    --color-primary-2: #170b2a; //achei essa mais parecida
-    --color-primary-3: #1f104f; //tem essa tbm
+    --color-primary: #1f104f; //tem essa tbm
     --color-secondary: #972b12;
     --color-tertiary-0: #d6a60d;
     --color-tertiary-1: #dfb01c;
@@ -24,9 +21,10 @@ export const GlobalStyles = createGlobalStyle`
 
     --color-success: #168821;
     --color-negative: #E83F5B;
+    --color-whatsapp: #32cd32;
         
     
-    --radius-default: 5px;
+    --radius-default: 10px;
     --shadow: 0 4px 4px 0 #00000040;
 
     --font-size-0: 4.5rem;
@@ -40,6 +38,8 @@ export const GlobalStyles = createGlobalStyle`
     --font-size-8: 0.75rem;
     --font-size-9: 0.5rem;
     --font-size-10: 0.25rem;
+
+    
 }
 
 body{
