@@ -7,6 +7,9 @@ export const StyledHeader = styled.header`
   color: var(--color-grey-0);
   font-weight: 600;
   height: auto;
+  position: fixed;
+  z-index: 100;
+  width: 100vw;
 
   .header_up {
     display: flex;
@@ -82,6 +85,14 @@ export const StyledHeader = styled.header`
     font-weight: 500;
   }
 
+  .home,
+  .whoAreUs,
+  .area,
+  .clients,
+  .contact {
+    display: none;
+  }
+
   #instagram_icon,
   #facebook_icon,
   #linkedIn_icon,
@@ -102,6 +113,20 @@ export const StyledHeader = styled.header`
     color: var(--color-grey-1);
     border: 0.25px solid var(--color-grey-1);
     border-radius: 5%;
+  }
+
+  .hidden {
+    display: block;
+  }
+
+  .header_nav_button:focus {
+    border: none;
+    border-radius: none;
+  }
+
+  button:focus {
+    border: none;
+    border-radius: none;
   }
 
   @media (min-width: 1023px) {
@@ -134,6 +159,11 @@ export const StyledHeader = styled.header`
       display: flex;
       align-items: center;
       justify-content: center;
+    }
+
+    .header_nav_item:focus {
+      border: none;
+      border-radius: none;
     }
 
     .header_nav_button {

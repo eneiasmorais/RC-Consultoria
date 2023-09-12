@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { StyledWhyHire } from "../styles/StyledWhyHire";
+import { AuthPageContext } from "../providers/pageContext";
 
 export const WhyHire = () => {
+  const { whyHireRef } = useContext(AuthPageContext);
   return (
-    <StyledWhyHire>
+    <StyledWhyHire id="whyHire" ref={whyHireRef}>
       <div className="div_title_articles">
         <h1 className="title_articles">POR QUE VOCÊ DEVE CONTRATAR A</h1>
         <div className="title_emphasis">

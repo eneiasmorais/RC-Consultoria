@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const StyledExpertises = styled.section`
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;

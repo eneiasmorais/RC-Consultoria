@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import { StyledWhoAreWe } from "../styles/StyledWhoAreWe";
+import { AuthPageContext } from "../providers/pageContext";
 
 export const WhoAreWe = () => {
+  const { whoAreWeRef } = useContext(AuthPageContext);
   return (
-    <StyledWhoAreWe>
+    <StyledWhoAreWe id="whoAreWe" ref={whoAreWeRef}>
       <article>
         <div className="content_articles_container">
           <h1 className="title_articles">Quem somos nós</h1>
@@ -22,7 +25,7 @@ export const WhoAreWe = () => {
         </div>
         <div className="business_div_img">
           <img
-            src="./src/assets/business_img_01.png"
+            src="./src/assets/carol_regiane_cutted.jpg"
             alt="Business"
             className="business_img"
           />

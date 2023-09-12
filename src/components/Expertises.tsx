@@ -1,8 +1,11 @@
+import { useContext } from "react";
+import { AuthPageContext } from "../providers/pageContext";
 import { StyledExpertises } from "../styles/StyledExpertises";
 
 export const Expertises = () => {
+  const { clientsRef } = useContext(AuthPageContext);
   return (
-    <StyledExpertises>
+    <StyledExpertises id="clients" ref={clientsRef}>
       <h1 className="title_articles">Nossa Expertise:</h1>
       <div className="image_container">
         <img

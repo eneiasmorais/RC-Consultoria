@@ -14,9 +14,9 @@ export const StyledContacts = styled.section`
     align-items: center;
     justify-content: center;
     background-color: #fcfafc;
-    padding: 1rem;
     border-radius: var(--radius-default);
     width: 90%;
+    padding: 1.5rem 0;
   }
 
   .div_title_contacts,
@@ -80,9 +80,9 @@ export const StyledContacts = styled.section`
 
   .title_message {
     color: var(--color-grey-1);
-    font-size: var(--font-size-5);
+    font-size: var(--font-size-6);
     font-weight: 600;
-    margin: 1rem 2.5rem;
+    margin: 0 2.5rem 2.5rem 2.5rem;
     line-height: 36px;
   }
 
@@ -134,6 +134,10 @@ export const StyledContacts = styled.section`
     .div_message {
       width: 50%;
       margin: 3rem;
+    }
+
+    .title_message {
+      font-size: var(--font-size-5);
     }
   }
 `;

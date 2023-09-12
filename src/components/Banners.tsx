@@ -38,7 +38,7 @@ export const Banners = () => {
               className={`banner_img_03 ${
                 activeImageIndex === 2 ? "active" : ""
               }`}
-              src="./src/assets/banner_RC_04_desktop.png"
+              src="./src/assets/logo_banner.jpg"
               alt="Banner 03"
             />
           </div>
@@ -99,9 +99,7 @@ export const Banners = () => {
               className={`banner_img_02 ${
                 activeImageIndex === 1 ? "active" : ""
               }`}
-              src={`./src/assets/banner_RC_03_${
-                isMobile ? "mobile" : "desktop"
-              }.png`}
+              src="./src/assets/banner_RC_03_desktop.png"
               alt="Banner 02"
             />
           </div>

@@ -1,6 +1,9 @@
 import { styled } from "styled-components";
 
-export const StyledHomePage = styled.body`
+export const StyledHomePage = styled.div`
   margin: 0;
-  background-color: #e8e8e8;
+
+  main {
+    margin-top: 14rem;
+  }
 `;

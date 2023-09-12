@@ -7,12 +7,13 @@ export const StyledDifferentials = styled.section`
   align-items: center;
 
   .business_img {
-    width: 100vw;
+    width: 100%;
   }
 
   .image_container {
     position: relative;
     height: fit-content;
+    width: 100%;
   }
 
   .title_articles {
@@ -46,6 +47,7 @@ export const StyledDifferentials = styled.section`
     list-style: none;
   }
   @media (min-width: 1023px) {
+    margin: 3rem 6rem;
     .differentials_container {
       width: 100%;
     }
@@ -55,10 +57,6 @@ export const StyledDifferentials = styled.section`
 
       gap: 10rem;
       padding: 3rem 6rem;
-    }
-
-    .differentials_list {
-      width: 50%;
     }
 
     .title_articles {

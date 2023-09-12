@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const StyledBanners = styled.section<{ activeImageIndex: number }>`
+export const StyledBanners = styled.div<{ activeImageIndex: number }>`
+  position: relative;
+  top: 13rem;
   .banner_slider {
     display: flex;
     transition: transform 0.5s ease-in-out;
@@ -47,12 +49,12 @@ export const StyledBanners = styled.section<{ activeImageIndex: number }>`
   /* Estilos específicos para os dois slides */
   .banner_slide_01 .banner_texts,
   .banner_button_container_01 {
-    left: 40%; /* Posição esquerda para o slide 01 */
+    left: 50%; /* Posição esquerda para o slide 01 */
   }
 
   .banner_slide_02 .banner_texts,
   .banner_button_container_02 {
-    left: 35%; /* Posição direita para o slide 02 */
+    left: 50%; /* Posição direita para o slide 02 */
   }
 
   .banner_slide_01 .banner_texts,
@@ -105,6 +107,8 @@ export const StyledBanners = styled.section<{ activeImageIndex: number }>`
   }
 
   @media (min-width: 1023px) {
+    position: relative;
+    top: 7rem;
     .banner_button_01,
     .banner_button_02 {
       cursor: pointer;
@@ -113,7 +117,7 @@ export const StyledBanners = styled.section<{ activeImageIndex: number }>`
     .banner_img_01,
     .banner_img_02,
     .banner_img_03 {
-      height: 80vh;
+      height: 85vh;
     }
 
     .banner_texts {
@@ -140,7 +144,7 @@ export const StyledBanners = styled.section<{ activeImageIndex: number }>`
       align-items: center;
       flex-wrap: nowrap;
       font-size: var(--font-size-7);
-      padding: 1.3rem;
+      padding: 1rem;
     }
 
     .banner_slide_01 .banner_texts,

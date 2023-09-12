@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const StyledWhoAreWe = styled.section`
+  display: flex;
+  flex-direction: column;
   article {
     display: flex;
     flex-direction: column;
@@ -8,7 +10,7 @@ export const StyledWhoAreWe = styled.section`
   }
   .title_articles {
     font-size: var(--font-size-3);
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
     color: var(--color-primary);
     font-weight: 800;
   }
@@ -36,12 +38,14 @@ export const StyledWhoAreWe = styled.section`
 
   .business_img {
     margin: 2rem;
-    width: 100%;
+    width: 80%;
     margin: 1rem;
   }
 
   @media (min-width: 1023px) {
     margin: 3rem 6rem;
+    flex-direction: row;
+    justify-content: flex-start;
     article {
       flex-direction: row;
       align-items: end;

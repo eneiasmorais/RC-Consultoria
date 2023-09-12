@@ -8,13 +8,14 @@ import { StyledHomePage } from "../styles/StyledHomePage";
 import { WhyHire } from "../components/WhyHire";
 import { PhasesWork } from "../components/PhasesWork";
 import { Contacts } from "../components/Contacts";
+import { FixedWhatsAppButton } from "../components/FixedWhatsAppButton";
 
 export const HomePage = () => {
   return (
     <StyledHomePage>
       <Header />
+      <Banners />
       <main>
-        <Banners />
         <WhoAreWe />
         <Differentials />
         <OurServices />
@@ -22,6 +23,7 @@ export const HomePage = () => {
         <WhyHire />
         <PhasesWork />
         <Contacts />
+        <FixedWhatsAppButton />
       </main>
     </StyledHomePage>
   );

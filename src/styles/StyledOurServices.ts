@@ -5,7 +5,7 @@ export const StyledOurServices = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 3rem 6rem;
+  /* margin: 3rem 6rem; */
 
   .title_articles {
     font-size: var(--font-size-3);
@@ -22,17 +22,14 @@ export const StyledOurServices = styled.section`
     align-items: center;
     width: 100%;
   }
+  .business_img {
+    width: 100%;
+  }
   @media (min-width: 1023px) {
-    .title_articles {
-      font-size: var(--font-size-2);
-    }
+    margin: 3rem 6rem;
 
     .image_container {
       flex-direction: row;
-    }
-
-    .business_img {
-      width: 33%;
     }
   }
 `;
