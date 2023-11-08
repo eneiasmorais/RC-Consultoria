@@ -6,6 +6,7 @@ export const StyledContacts = styled.section`
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  padding-top: 7rem;
 
   .div_all_contacts,
   .div_message {
@@ -28,22 +29,36 @@ export const StyledContacts = styled.section`
   .title_contacts {
     color: var(--orange-0);
     font-size: var(--font-size-3);
-    font-weight: 600;
-    margin-bottom: 1rem;
+    font-weight: 500;
+    margin: 1.5rem;
+    text-align: center;
   }
 
   .subtitle_contacts,
   .text_above_button {
     color: var(--color-grey-1);
     line-height: 24px;
+    font-size: var(--font-size-5);
+    margin: 1rem;
+    text-align: center;
+  }
+
+  .subtitle_contacts {
+    margin-bottom: 0.5rem;
     font-size: var(--font-size-6);
   }
 
   .contacts_list {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
     margin-bottom: 2rem;
+    border: 1px solid var(--color-grey-1);
+    padding: 2rem 1rem;
+    border-radius: 4px;
+    width: max-content;
   }
 
   .contact_item {
@@ -80,10 +95,11 @@ export const StyledContacts = styled.section`
 
   .title_message {
     color: var(--color-grey-1);
-    font-size: var(--font-size-6);
-    font-weight: 600;
-    margin: 0 2.5rem 2.5rem 2.5rem;
-    line-height: 36px;
+    font-size: var(--font-size-4);
+    font-weight: 500;
+    margin: 1rem;
+    line-height: 42px;
+    text-align: center;
   }
 
   .contact_form {
@@ -91,9 +107,8 @@ export const StyledContacts = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
     width: 80%;
-    max-width: 100%;
   }
 
   .input_container {
@@ -104,14 +119,14 @@ export const StyledContacts = styled.section`
   }
 
   input {
-    height: 2.5rem;
+    height: 3rem;
     border: 1px solid var(--color-grey-1);
     border-radius: var(--radius-default);
-    width: 100%;
+    padding: 0.6rem;
   }
 
   #message {
-    height: 15rem;
+    height: 12rem;
     vertical-align: top;
     padding: 0.6rem;
     border-radius: var(--radius-default);
@@ -121,23 +136,48 @@ export const StyledContacts = styled.section`
     height: 2.5rem;
     width: 10rem;
     border: 1px solid var(--color-grey-1);
-    /* background-color: var(--color-primary); */
-    background-color: var(--color-secondary);
-    color: #fcfafc;
+    background-color: var(--color-primary);
+    color: var(--color-grey-0);
     font-weight: 600;
+    border-radius: 6px;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 0.9rem;
+  }
+
+  label {
+    font-weight: 700;
+    color: var(--color-grey-1);
+  }
+
+  .text_above_button {
+    font-weight: 700;
   }
 
   @media (min-width: 1023px) {
     flex-direction: row;
-    margin: 3rem 6rem;
     .div_all_contacts,
     .div_message {
       width: 50%;
       margin: 3rem;
     }
 
-    .title_message {
+    /* .title_message {
       font-size: var(--font-size-5);
+    } */
+
+    .contact_form {
+      width: 70%;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    select {
+      cursor: pointer;
     }
   }
 `;

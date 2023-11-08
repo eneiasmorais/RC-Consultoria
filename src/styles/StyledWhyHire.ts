@@ -11,6 +11,7 @@ export const StyledWhyHire = styled.section`
     flex-direction: column;
     align-items: center;
     font-size: var(--font-size-4);
+    margin-top: 3rem;
     margin-bottom: 3rem;
     color: var(--color-primary);
     font-weight: 500;
@@ -20,6 +21,7 @@ export const StyledWhyHire = styled.section`
     text-align: center;
     margin: 1.5rem 0;
     line-height: 42px;
+    font-weight: 600;
   }
 
   .title_emphasis {
@@ -31,14 +33,17 @@ export const StyledWhyHire = styled.section`
     color: var(--orange-0);
   }
 
+  #whyHire {
+    height: max-content;
+  }
+
   .whyList {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     gap: 3rem;
     color: var(--color-grey-1);
-    padding: 1rem;
     margin: 1.5rem 2rem;
     line-height: 36px;
     font-size: var(--font-size-5);
@@ -46,14 +51,28 @@ export const StyledWhyHire = styled.section`
     width: 100vw;
   }
 
-  .title_item {
-    color: var(--color-primary);
+  .whyList_item {
+    border: 1.5px solid var(--color-grey-1);
+    border-radius: 8px;
+    background-color: aliceblue;
+    padding: 1.5rem;
+    background-image: url("./src/assets/banner-logo-04.jpg");
+  }
+
+  .div-title-item {
+    color: var(--color-grey-0);
     font-weight: 700;
     margin-bottom: 2rem;
+    font-size: var(--font-size-5);
+    text-align: end;
   }
 
   .number_item_list {
     font-size: var(--font-size-0);
+  }
+
+  .content_item {
+    font-size: var(--font-size-7);
   }
 
   @media (min-width: 1023px) {
@@ -68,16 +87,17 @@ export const StyledWhyHire = styled.section`
     }
 
     .whyList {
+      flex-direction: row;
       flex-wrap: wrap;
       font-size: var(--font-size-6);
-      height: 200vh;
-      justify-content: flex-start;
+      justify-content: center;
+      flex-wrap: wrap;
       width: 100%;
+      gap: 5rem;
     }
 
     .whyList_item {
-      width: 50%;
-      padding: 0 3rem;
+      width: 25%;
     }
   }
 `;

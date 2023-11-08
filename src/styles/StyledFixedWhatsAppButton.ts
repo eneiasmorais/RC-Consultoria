@@ -1,7 +1,7 @@
 import { styled } from "styled-components";
 
 export const StyledFixedWhatsAppButton = styled.div`
-  position: absolute;
+  /* position: absolute; */
 
   #whatsapp-icon {
     position: fixed;

@@ -1,22 +1,17 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { StyledHeader } from "../styles/StyledHeader";
 import { Link } from "react-router-dom";
-import { AuthPageContext } from "../providers/pageContext";
 
 export const Header = () => {
   const [showNavList, setShowNavList] = useState(true);
-  const [activeSection, setActiveSection] = useState("home");
-  const {
-    whoAreWeRef,
-    expertisesRef,
-    differentialsRef,
-    whyHireRef,
-    servicesRef,
-    clientsRef,
-    contactRef,
-  } = useContext(AuthPageContext);
+  const [activeSection] = useState("");
 
   const scrollToTop = () => {
+    const menu = document.querySelector(".nav_mobile");
+    if (menu) {
+      menu.classList.remove("nav_mobile");
+      menu.classList.add("display_none");
+    }
     window.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -27,6 +22,10 @@ export const Header = () => {
     const handleResize = () => {
       setShowNavList(window.innerWidth > 1023);
     };
+    const container = document.querySelector(".nav_mobile");
+    if (container && window.innerWidth > 1023) {
+      container.classList.add("hidden");
+    }
 
     window.addEventListener("resize", handleResize);
 
@@ -37,44 +36,24 @@ export const Header = () => {
     };
   }, []);
 
-  const scrollToSection = (
-    sectionRef: React.RefObject<HTMLDivElement | null>
-  ) => {
-    if (sectionRef.current) {
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+  const handleMenuMobile = () => {
+    const button = document.querySelector(".menu_button");
+    const container = document.querySelector(".nav_mobile");
+
+    if (button && container) {
+      container.classList.toggle("hidden");
     }
   };
 
-  const handleNavButtonClick = (targetSectionId: string) => {
-    setActiveSection(targetSectionId);
-    switch (targetSectionId) {
-      case "home":
-        scrollToTop();
-        break;
-      case "whoAreWe":
-        scrollToSection(whoAreWeRef);
-        break;
-      case "differentials":
-        scrollToSection(differentialsRef);
-        break;
-      case "expertises":
-        scrollToSection(expertisesRef);
-        break;
-      case "whyHire":
-        scrollToSection(whyHireRef);
-        break;
-      case "services":
-        scrollToSection(servicesRef);
-        break;
-      case "clients":
-        scrollToSection(clientsRef);
-        break;
-      case "contact":
-        scrollToSection(contactRef);
-        break;
-      default:
-        break;
-    }
+  const closeMenu = () => {
+    const container = document.querySelector(".nav_mobile");
+    const buttons = document.querySelectorAll(".option_nav_button");
+
+    buttons.forEach((button) => {
+      button.addEventListener("click", () => {
+        container?.classList.toggle("hidden");
+      });
+    });
   };
 
   return (
@@ -92,29 +71,24 @@ export const Header = () => {
           <div id="header_contacts_adress">
             <i className="fa-solid fa-location-pin"></i>
             <p id="header_p_adress">
-              Av. Anísio Haddad, 6.900 | Sala 01 | S. J. Rio Preto - SP
+              Av. Anísio Haddad, 6.900 | Sala 05 | S. J. Rio Preto - SP
             </p>
           </div>
         </div>
         <div className="header_up_left_socialNetworks">
-          <Link to="https://www.instagram.com/rc_consultoriatributaria/">
+          <Link to="https://www.instagram.com/rctributaria/">
             <button id="instagram_icon">
               <i className="fa-brands fa-instagram"></i>
             </button>
           </Link>
-          <Link to="">
+          <Link to="https://www.facebook.com/profile.php?id=61550853845754">
             <button id="facebook_icon">
               <i className="fa-brands fa-facebook"></i>
             </button>
           </Link>
-          <Link to="https://www.linkedin.com/in/rc-consultoria-tributaria-26b59628b/">
+          <Link to="https://www.linkedin.com/company/100032872/admin/feed/posts/">
             <button id="linkedIn_icon">
               <i className="fa-brands fa-linkedin"></i>
-            </button>
-          </Link>
-          <Link to="">
-            <button id="youTube_icon">
-              <i className="fa-brands fa-youtube"></i>
             </button>
           </Link>
         </div>
@@ -138,99 +112,161 @@ export const Header = () => {
               </button>
             </li>
             <li className="header_nav_item">
-              <select
-                data-target="company"
-                onClick={() => handleNavButtonClick("company")}
-                className={`header_nav_button ${
-                  activeSection === "company" ? "" : "hidden"
-                }`}
-                defaultValue={"company"}
-              >
-                A EMPRESA
-                <option value="company">A EMPRESA</option>
-                <option
-                  value="whoAreWe"
+              <li className="header_nav_item">
+                <a
+                  href="#whoAreWe"
                   data-target="whoAreWe"
-                  onClick={() => handleNavButtonClick("whoAreWe")}
                   className={`header_nav_button ${
                     activeSection === "whoAreWe" ? "" : "hidden"
                   }`}
                 >
                   QUEM SOMOS
-                </option>
-                <option
-                  value="differentials"
-                  data-target="differentials"
-                  onClick={() => handleNavButtonClick("differentials")}
-                  className={`header_nav_button ${
-                    activeSection === "differentials" ? "" : "hidden"
-                  }`}
-                >
-                  NOSSOS DIFERENCIAIS
-                </option>
-                <option
-                  value="expertises"
-                  data-target="expertises"
-                  onClick={() => handleNavButtonClick("expertises")}
-                  className={`header_nav_button ${
-                    activeSection === "expertises" ? "" : "hidden"
-                  }`}
-                >
-                  EXPERTISES
-                </option>
-                <option
-                  value="whyHire"
-                  data-target="whyHire"
-                  onClick={() => handleNavButtonClick("whyHire")}
-                  className={`header_nav_button ${
-                    activeSection === "whyHire" ? "" : "hidden"
-                  }`}
-                >
-                  POR QUE NOS CONTRATAR
-                </option>
-              </select>
+                </a>
+              </li>
             </li>
             <li className="header_nav_item">
-              <button
+              <a
+                href="#services"
                 data-target="services"
-                onClick={() => handleNavButtonClick("services")}
                 className={`header_nav_button ${
                   activeSection === "services" ? "" : "hidden"
                 }`}
               >
-                NOSSOS SERVIÇOS
-              </button>
+                SERVIÇOS
+              </a>
             </li>
             <li className="header_nav_item">
-              <button
-                data-target="clients"
-                onClick={() => handleNavButtonClick("clients")}
+              <a
+                href="#differentials"
+                data-target="differentials"
                 className={`header_nav_button ${
-                  activeSection === "clients" ? "" : "hidden"
+                  activeSection === "differentials" ? "" : "hidden"
                 }`}
               >
-                CLIENTES
-              </button>
+                DIFERENCIAIS
+              </a>
             </li>
             <li className="header_nav_item">
-              <button
+              <a
+                href="#contact"
                 data-target="contact"
-                onClick={() => handleNavButtonClick("contact")}
                 className={`header_nav_button ${
                   activeSection === "contact" ? "" : "hidden"
                 }`}
               >
                 CONTATO
-              </button>
+              </a>
             </li>
           </ul>
         ) : (
           <div className="menu_div_button">
-            <button className="menu_button">
+            <button className="menu_button" onClick={() => handleMenuMobile()}>
               <i className="fa-solid fa-bars"></i>
             </button>
           </div>
         )}
+      </div>
+      <div className="nav_mobile display_none">
+        <ul className="nav_list_mobile">
+          <li className="header_nav_item">
+            <button
+              onClick={scrollToTop}
+              className={`option_nav_button ${
+                activeSection === "home" ? "" : "hidden"
+              }`}
+            >
+              INÍCIO
+            </button>
+          </li>
+          <li className="header_nav_item">
+            <a
+              href="#whoAreWe"
+              data-target="whoAreWe"
+              className={`option_nav_button ${
+                activeSection === "whoAreWe" ? "" : "hidden"
+              }`}
+            >
+              QUEM SOMOS
+            </a>
+          </li>
+          <li className="header_nav_item" onClick={() => closeMenu()}>
+            <a
+              href="#differentials"
+              data-target="differentials"
+              className={`option_nav_button ${
+                activeSection === "differentials" ? "" : "hidden"
+              }`}
+            >
+              NOSSOS DIFERENCIAIS
+            </a>
+          </li>
+          <li className="header_nav_item" onClick={() => closeMenu()}>
+            <a
+              href="#expertises"
+              data-target="expertises"
+              className={`option_nav_button ${
+                activeSection === "expertises" ? "" : "hidden"
+              }`}
+            >
+              EXPERTISES
+            </a>
+          </li>
+          <li className="header_nav_item" onClick={() => closeMenu()}>
+            <a
+              href="#whyHire"
+              data-target="whyHire"
+              className={`option_nav_button ${
+                activeSection === "whyHire" ? "" : "hidden"
+              }`}
+            >
+              POR QUE NOS CONTRATAR
+            </a>
+          </li>
+          <li className="header_nav_item" onClick={() => closeMenu()}>
+            <a
+              href="#phases"
+              data-target="whyHire"
+              className={`option_nav_button ${
+                activeSection === "whyHire" ? "" : "hidden"
+              }`}
+            >
+              ETAPAS DO NOSSO TRABALHO
+            </a>
+          </li>
+          <li className="header_nav_item" onClick={() => closeMenu()}>
+            <a
+              href="#services"
+              data-target="services"
+              className={`option_nav_button ${
+                activeSection === "services" ? "" : "hidden"
+              }`}
+            >
+              NOSSOS SERVIÇOS
+            </a>
+          </li>
+          <li className="header_nav_item" onClick={() => closeMenu()}>
+            <a
+              href="clients"
+              data-target="clients"
+              className={`option_nav_button ${
+                activeSection === "clients" ? "" : "hidden"
+              }`}
+            >
+              CLIENTES
+            </a>
+          </li>
+          <li className="header_nav_item" onClick={() => closeMenu()}>
+            <a
+              href="#contact"
+              data-target="contact"
+              className={`option_nav_button ${
+                activeSection === "contact" ? "" : "hidden"
+              }`}
+            >
+              CONTATO
+            </a>
+          </li>
+        </ul>
       </div>
     </StyledHeader>
   );

@@ -5,70 +5,80 @@ export const StyledDifferentials = styled.section`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("./src/assets/banner-logo-04.jpg");
+  background-size: cover;
+  height: max-content;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 2.5rem;
 
-  .business_img {
-    width: 100%;
-  }
-
-  .image_container {
-    position: relative;
-    height: fit-content;
-    width: 100%;
-  }
-
-  .title_articles {
-    font-size: var(--font-size-3);
-    color: var(--color-grey-0);
-    font-weight: 800;
-    position: relative;
-    bottom: 7rem;
-    margin: 0 1rem;
-  }
-  .differentials_lists {
+  .divTop {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    margin: 0 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    padding: 4rem 2rem 0 2rem;
+    margin: 2rem 0;
+  }
+
+  .divDown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .divWhite {
+    background-color: #ffffff;
+    z-index: 10;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 8px;
+  }
+
+  .title_differentials-0 {
+    color: var(--color-grey-0);
+    font-size: var(--font-size-4);
+  }
+
+  .title_differentials {
+    text-align: left;
+    margin: 1.5rem 0;
+    font-size: var(--font-size-4);
+  }
+
+  .title_differentials_emphasys {
+    font-size: var(--font-size-2);
+    font-weight: 300;
+    color: var(--color-tertiary-0);
+  }
+  .title_differentials_emphasys-1 {
+    font-size: var(--font-size-3);
+    font-weight: 300;
+    color: var(--color-tertiary-0);
+  }
+
+  .divNoBackground {
+    color: var(--color-grey-0);
+    font-size: var(--font-size-5);
   }
 
   .differentials_list {
+    z-index: 10;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
-  .differentials_item {
-    line-height: 36px;
-    font-size: var(--font-size-5);
-    text-align: left;
-    color: var(--color-primary);
-    line-height: 3rem;
-    font-weight: 500;
-    list-style: none;
-  }
   @media (min-width: 1023px) {
-    margin: 3rem 6rem;
-    .differentials_container {
-      width: 100%;
-    }
-
-    .differentials_lists {
+    .divDown {
       flex-direction: row;
-
-      gap: 10rem;
-      padding: 3rem 6rem;
     }
 
-    .title_articles {
-      font-size: var(--font-size-0);
-      font-weight: 800;
-      text-align: left;
-      margin: 0 6rem;
-    }
-
-    .differentials_item {
-      font-size: var(--font-size-5);
-      font-weight: 500;
+    .divWhite {
+      width: 50%;
     }
   }
 `;

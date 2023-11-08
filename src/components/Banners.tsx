@@ -38,7 +38,7 @@ export const Banners = () => {
               className={`banner_img_03 ${
                 activeImageIndex === 2 ? "active" : ""
               }`}
-              src="./src/assets/logo_banner.jpg"
+              src="./src/assets/benner-logo-05.jpg"
               alt="Banner 03"
             />
           </div>
@@ -48,18 +48,21 @@ export const Banners = () => {
             }`}
           >
             <div className="banner_texts banner_texts_01">
-              <h3 className="banner_title1_medium">Somos especializados em</h3>
+              <h3 className="banner_title1_medium">Somos especialistas em</h3>
               <div className="banner_title2_high_container_01">
-                <h2 className="banner_title2_high">Gestão tributária</h2>
-                <h2 className="banner_title2_high">inteligente</h2>
+                <h2 className="banner_title2_high">Inteligência</h2>
+                <h2 className="banner_title2_high">tributária</h2>
               </div>
               <h4 className="banner_title3_small">
-                Oferecemos soluções eficientes para redução de custos
-                tributários.
+                Soluções eficientes para minimizar custos fiscais.
               </h4>
               <div className="banner_button_container_01">
-                <button className="banner_button_01">Método de trabalho</button>
-                <button className="banner_button_02">Fale conosco</button>
+                <a className="banner_button_01" href="#phases">
+                  Método de trabalho
+                </a>
+                <a className="banner_button_02" href="#contact">
+                  Fale conosco
+                </a>
               </div>
             </div>
             <img
@@ -78,9 +81,7 @@ export const Banners = () => {
             }`}
           >
             <div className="banner_texts banner_texts_02">
-              <h3 className="banner_title1_medium">
-                Domínio tributário e CIGAM juntos
-              </h3>
+              <h3 className="banner_title1_medium">Conheça o nosso trabalho</h3>
               <div className="banner_title2_high_container_02">
                 <h2 className="banner_title2_high">Parceria de</h2>
                 <h2 className="banner_title2_high">negócios</h2>
@@ -89,17 +90,20 @@ export const Banners = () => {
                 Com o objetivo de impulsionar resultados
               </h4>
               <div className="banner_button_container_02">
-                <button className="banner_button_01 button_alt">
-                  Saiba mais
-                </button>
-                <button className="banner_button_02">Conheça a CIGAM</button>
+                <a
+                  href="#contact"
+                  data-target="contact"
+                  className="header_nav_button banner_button_01 button_alt"
+                >
+                  Seja um parceiro
+                </a>
               </div>
             </div>
             <img
               className={`banner_img_02 ${
                 activeImageIndex === 1 ? "active" : ""
               }`}
-              src="./src/assets/banner_RC_03_desktop.png"
+              src="./src/assets/banner-logo-04.jpg"
               alt="Banner 02"
             />
           </div>

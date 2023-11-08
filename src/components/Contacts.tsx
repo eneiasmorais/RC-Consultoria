@@ -19,7 +19,7 @@ export const Contacts = () => {
       from_name: name,
       from_email: email,
       from_subject: subject,
-      from_message: message,
+      message: message,
     };
     emailjs
       .send(
@@ -48,7 +48,7 @@ export const Contacts = () => {
         <div className="div_title_contacts">
           <h2 className="title_contacts">CONTATO</h2>
           <p className="subtitle_contacts">
-            Dúvidas? Reclamações? Sugestões? Elogios?
+            Dúvidas, reclamações, sugestões ou elogios?
           </p>
           <p className="subtitle_contacts">Entre em contato conosco!</p>
         </div>
@@ -87,7 +87,7 @@ export const Contacts = () => {
         </ul>
         <div className="contacts_footer">
           <p className="text_above_button">Fale com um de nossos consultores</p>
-          <Link to="https://w.app/RCConsultoriaTributaria">
+          <Link to="https://wa.link/koqjnn">
             <button className="contacts_whatsapp_button">
               <i className="fa-brands fa-whatsapp"></i> Fale agora pelo
               WhatsApp!
@@ -96,9 +96,7 @@ export const Contacts = () => {
         </div>
       </div>
       <div className="div_message">
-        <h2 className="title_message">
-          Ou envie uma mensagem que logo entraremos em contato!
-        </h2>
+        <h2 className="title_message">OU ENVIE UMA MENSAGEM</h2>
         <form
           action="/send"
           method="POST"
@@ -106,7 +104,7 @@ export const Contacts = () => {
           onSubmit={sendEmail}
         >
           <div className="input_container">
-            <label htmlFor="name">Seu nome</label>
+            <label htmlFor="name">Nome</label>
             <input
               type="text"
               id="name"
@@ -118,7 +116,7 @@ export const Contacts = () => {
             />
           </div>
           <div className="input_container">
-            <label htmlFor="email">Seu e-mail</label>
+            <label htmlFor="email">E-mail</label>
             <input
               type="email"
               id="email"
@@ -142,7 +140,7 @@ export const Contacts = () => {
             />
           </div>
           <div className="input_container">
-            <label htmlFor="message">Sua mensagem</label>
+            <label htmlFor="message">Mensagem</label>
             <textarea
               id="message"
               name="message"
